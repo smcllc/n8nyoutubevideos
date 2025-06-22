@@ -30,14 +30,44 @@
         .btn { display: inline-block; background: #ff6b6b; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-size: 12px; margin-top: 10px; }
         .btn:hover { background: #ff5252; }
         .popular-badge { background: #4caf50; color: white; padding: 2px 8px; border-radius: 12px; font-size: 10px; margin-left: 8px; }
-        .engagement-badge { background: #007bff; color: white; padding: 2px 8px; border-radius: 12px; font-size: 10px; margin-left: 8px; } /* NEW STYLE */
+        .engagement-badge { background: #007bff; color: white; padding: 2px 8px; border-radius: 12px; font-size: 10px; margin-left: 8px; }
+        /* NEW STYLE FOR SIDE-BY-SIDE SECTIONS */
+        .featured-videos-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            gap: 20px; /* Space between the cards */
+            justify-content: center; /* Center the cards */
+            margin-top: 40px;
+            margin-bottom: 20px; /* Space before next section */
+        }
+        .featured-video-wrapper {
+            flex: 1 1 48%; /* Allows each to take roughly half width, with flexibility */
+            max-width: 580px; /* Max width for individual wrapper */
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+            color: #666;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .featured-video-wrapper .video-card {
+            max-width: none; /* Override max-width from .video-card to fill wrapper */
+            margin: 0 auto; /* Center video card within its wrapper */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .featured-video-wrapper {
+                flex: 1 1 100%; /* Stack on smaller screens */
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>🎥 YouTube Video Report for "n8n automation"</h1>
-            <p>Time Range: 72 hours | Generated: 6/22/2025, 9:27:02 AM</p>
+            <p>Time Range: 72 hours | Generated: 6/22/2025, 9:30:25 AM</p>
             <p style="text-align: center; margin-top: 15px;">Brought to you by <a href="https://scottmoore.consulting" target="_blank" style="color: #ff6b6b; text-decoration: none; font-weight: bold;">Scott Moore Consulting LLC.</a></p>
         </div>
 
@@ -47,7 +77,7 @@
                 <span class="stat-label">Total Videos</span>
             </div>
             <div class="stat-box">
-                <span class="stat-number">601</span>
+                <span class="stat-number">602</span>
                 <span class="stat-label">Total Views</span>
             </div>
             <div class="stat-box">
@@ -55,7 +85,7 @@
                 <span class="stat-label">Avg Views</span>
             </div>
             <div class="stat-box">
-                <span class="stat-number">12.81%</span>
+                <span class="stat-number">12.96%</span>
                 <span class="stat-label">Avg Engagement</span>
             </div>
             <div class="stat-box">
@@ -64,19 +94,19 @@
             </div>
         </div>
 
-        <div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 8px; text-align: center; color: #666;">
-            <h2>🏆 Most Popular Video</h2>
-            <div style="display: flex; justify-content: center;">
-                <div class="video-card" style="max-width: 400px; text-align: left;">
+        <div class="featured-videos-container">
+            <div class="featured-video-wrapper">
+                <h2>🏆 Most Popular Video</h2>
+                <div class="video-card">
                     <img src="https://i.ytimg.com/vi/lnggO_CCGO0/hqdefault.jpg" alt="สอนสร้าง YouTube Shorts อัตโนมัติด้วย n8n + Seedance 1.0 | ดีกว่า & ถูกกว่า Veo3 20 เท่า 🔥" class="video-thumbnail">
                     <div class="video-info">
                         <div class="video-title">สอนสร้าง YouTube Shorts อัตโนมัติด้วย n8n + Seedance 1.0 | ดีกว่า & ถูกกว่า Veo3 20 เท่า 🔥 <span class="popular-badge">Most Popular</span></div>
                         <div class="video-channel">📺 BoomBigNose</div>
                         <div class="video-stats">
-                            <span>👁️ 469</span>
-                            <span>👍 40</span>
+                            <span>👁️ 470</span>
+                            <span>👍 41</span>
                             <span>💬 7</span>
-                            <span>⚡ 10.02%</span>
+                            <span>⚡ 10.21%</span>
                         </div>
                         <div class="video-meta">
                             ⏱️ 46:28 | 📅 7 hours ago
@@ -85,12 +115,10 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div style="margin-top: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px; text-align: center; color: #666;">
-            <h2>✨ Most Engaged Video</h2>
-            <div style="display: flex; justify-content: center;">
-                <div class="video-card" style="max-width: 400px; text-align: left;">
+            <div class="featured-video-wrapper">
+                <h2>✨ Most Engaged Video</h2>
+                <div class="video-card">
                     <img src="https://i.ytimg.com/vi/KxyFE_I6ROo/hqdefault.jpg" alt="AUTOMATIZANDO TUDO COM O N8N" class="video-thumbnail">
                     <div class="video-info">
                         <div class="video-title">AUTOMATIZANDO TUDO COM O N8N <span class="engagement-badge">Most Engaged</span></div>
@@ -109,7 +137,6 @@
                 </div>
             </div>
         </div>
-
         <h2>📹 Latest Videos</h2>
         <div class="video-grid">
             
@@ -119,10 +146,10 @@
                         <div class="video-title">สอนสร้าง YouTube Shorts อัตโนมัติด้วย n8n + Seedance 1.0 | ดีกว่า & ถูกกว่า Veo3 20 เท่า 🔥</div>
                         <div class="video-channel">📺 BoomBigNose</div>
                         <div class="video-stats">
-                            <span>👁️ 469</span>
-                            <span>👍 40</span>
+                            <span>👁️ 470</span>
+                            <span>👍 41</span>
                             <span>💬 7</span>
-                            <span>⚡ 10.02%</span>
+                            <span>⚡ 10.21%</span>
                         </div>
                         <div class="video-meta">
                             ⏱️ 46:28 | 📅 7 hours ago
